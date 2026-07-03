@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+  background-color: #fafafa;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #004085;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #003366;
+  flex-direction: column;
+  gap: 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: #63b3ed;
+}
+
+.hamburger {
+  display: block;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle:checked ~ .nav-links {
+  display: flex;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  min-height: 80vh;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 38px;
+  color: #0d6efd;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.hero-text p {
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #084298;
+}
+
+table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 14px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+caption {
+    caption-side: top;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 280px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background: white;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    margin-top: 15px;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+.gallery-item p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    margin-top: 8px;
+}
+
+.register-section {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.register-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #007BFF;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007BFF;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 14px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.team-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.team-page h1 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+    font-size: 16px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.photo {
+    flex: 1;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+}
+
+.info {
+    flex: 2;
+}
+
+.info h2 {
+    color: #0d6efd;
+    margin-bottom: 8px;
+}
+
+.info h4 {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.info p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.mission, .vision {
+    background: #f1f5f9;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.mission h2, .vision h2 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #222;
+  color: #bbb;
+  margin-top: 60px;
+}
+
+footer h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    margin: 0 auto 20px auto;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .member {
+    flex-direction: column;
+    text-align: center;
+  }
+}
